@@ -1,6 +1,5 @@
 .parallax {
-    background-image: url("developer-pic.jpg");
-    min-height: 800px;
+    min-height: 700px;
     z-index: -1;
 
     /* scrolling effect */
@@ -12,12 +11,43 @@
 }
 
 h1 {
-    width: 800px;
+    font-family: 'Amatic SC', cursive;
+    
     padding-top:250px;
     color:white;
     text-transform: uppercase;
     text-shadow: 2px 2px #000;
+    
 }
 
+p {
+    font-family: 'Shadows Into Light', cursive;
+    color: white;
+    padding-top: 200px;
+    
+}
 
+#section2 {
+    background-color:white;
+    height:600px;
+}
+#section4 {
+    background-color:white;
+    height:600px;
+}
 
+.content {
+    height: 250px;
+    width: 200px;
+    background-color: #e6e6e6;
+    
+    
+}
+
+.img {
+    height:200px;
+    width:200px;
+    padding: 20px;
+   
+
+}
