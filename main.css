@@ -31,10 +31,7 @@ p {
 #quote {
     font-family: 'Shadows Into Light', cursive;
     color: white;
-
     font-size: 50px;
-
-
 }
 #section2 {
     background-color:white;
@@ -54,16 +51,22 @@ p {
     width: 200px;
     background-color: #e6e6e6;
     
-    
 }
 
 .img1 {
     height:200px;
     width:200px;
     padding: 20px;
-   
-
+    transition: 1s ;
 }
+
+.img1:hover {
+    transform: scale(1.2,1.2);
+}
+
+
+
+
 * {
     box-sizing: border-box;
 }
