@@ -27,13 +27,26 @@ p {
     
 }
 
+
+#quote {
+    font-family: 'Shadows Into Light', cursive;
+    color: white;
+
+    font-size: 50px;
+
+
+}
 #section2 {
     background-color:white;
     height:600px;
 }
 #section4 {
     background-color:white;
-    height:600px;
+    height:700px;
+}
+#section5 {
+    background-color: white;
+    height: 600px;
 }
 
 .content {
@@ -44,10 +57,60 @@ p {
     
 }
 
-.img {
+.img1 {
     height:200px;
     width:200px;
     padding: 20px;
    
 
 }
+* {
+    box-sizing: border-box;
+}
+
+.mySlides {
+    display: none;
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+  }
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }  
+
+  form {
+      float: right;
+      margin-top: 150px;
+      margin-right: 200px;
+  }
+
+  label {
+      font-size: 30px;
+  }
+
+  .forminputs {
+      float: right;
+      margin-left: 50px;
+      margin-top: 10px;
+
+  }

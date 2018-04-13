@@ -15,6 +15,8 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   
 </head>
 
 <body>
@@ -28,15 +30,18 @@
                 <a class="navbar-brand" href="#">DEVELOPERS HUB</a>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link mx-4" href="#">Home
+                        <a class="nav-link mx-4" id="homeID" onclick="getID(id)">Home
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-4 " href="#">Discover</a>
+                        <a class="nav-link mx-4 " id="discoverID" onclick="getID(id)">Discover</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled mx-4 " href="#">About</a>
+                        <a class="nav-link mx-4 " id="galleryID" onclick="getID(id)">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled mx-4 " id="aboutID" onclick="getID(id)">About</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -57,19 +62,25 @@
             <div class="row align-items-center mt-5 ml-5 ">
                 <div class="col">
                     <div class="content">
-                        <img class="img" src="logo/html.png" alt="html-image" >
+                        <a href="https://www.w3.org/standards/techs/html#w3c_all">
+                            <img class="img1" id="html-img" src="logo/html.png" alt="html-image" onclick="redirect(id)">
+                        </a>
                         <h4 style="text-align:center;">EXPLORE</h4>
                     </div>
                 </div>
                 <div class="col">
                     <div class="content">
-                        <img class="img"  src="logo/css.jpg" alt="css-image" >
+                        <a href="https://www.w3.org/standards/techs/css#w3c_all">
+                            <img class="img1"  id="css-img" src="logo/css.jpg" alt="css-image" onclick="redirect(id)">
+                        </a>
                         <h4 style="text-align:center;">EXPLORE</h4>
                     </div>
                 </div>
                 <div class="col">
                     <div class="content">
-                        <img class="img" src="logo/javascript.png" alt="javascript-image" >
+                        <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">
+                            <img class="img1" id="javascript-img" src="logo/javascript.png" alt="javascript-image" onclick="redirect(id)">
+                        </a>
                         <h4 style="text-align:center;">EXPLORE</h4>
                     </div>
                 </div>
@@ -77,19 +88,25 @@
             <div class="row align-items-center mt-5 ml-5">
                 <div class="col">
                     <div class="content">
-                        <img class="img" src="logo/react.jpg" alt="react-image" >
+                        <a href="https://reactjs.org/tutorial/tutorial.html">
+                            <img class="img1" id="react-img" src="logo/react.jpg" alt="react-image" onclick="redirect(id)">
+                        </a>
                         <h4 style="text-align:center;">EXPLORE</h4>
                     </div>
                 </div>
                 <div class="col">
                     <div class="content">
-                        <img class="img" src="logo/nodejs.png" alt="nodejs-image" >
+                        <a href="https://www.w3schools.com/nodejs/nodejs_intro.asp">
+                            <img class="img1" id="nodejs-img" src="logo/nodejs.png" alt="nodejs-image" onclick="redirect(id)">
+                        </a>
                         <h4 style="text-align:center;">EXPLORE</h4>
                     </div>
                 </div>
                 <div class="col">
                     <div class="content">
-                        <img class="img" src="logo/bootstrap.png" alt="bootstrap-image" >
+                        <a href="https://getbootstrap.com/">
+                            <img class="img1" id="bootstrap-img" src="logo/bootstrap.png" alt="bootstrap-image" onclick="redirect(id)">
+                        </a>
                         <h4 style="text-align:center;">EXPLORE</h4>
                     </div>
                 </div>
@@ -99,14 +116,41 @@
 
     <div id="section3" class="parallax" style="background-image: url('images/developer-pic-2.jpg');">
         <p class="display-2 text-center"> quote of the day</p>
-        <p>dsfjsdfhisdahfuhuo</p>
+        <div id = "quote" class="text-center">"while( !( succeed = try() ))"</div>
 
     </div>
-    <div id="section4" >
-            
-        
+    <div id="section4">
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="images/picture-1.jpg" style="width:100%;height:800px;">
+            </div>
+    
+            <div class="mySlides">
+                <img src="images/picture-2.jpg " style="width:100%;height:800px">
+            </div>
+    
+            <div class="mySlides">
+                <img src="images/picture-3.jpg" style="width:100%;height:800px;">
+            </div>
+            <a class="prev" style="color: white;" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" style="color: white;" onclick="plusSlides(1)">&#10095;</a>
+    
+        </div>
     </div>
+    <div id="section5" class="parallax" style="background-image:url('images/bottom-pic.jpg');">
+        <form>
+            <span>Contact Us</span><br>
+            <label for="namesID">Name:</label>
+            <input type="text" class="forminputs"><br>
+            <label for="namesID">Email:</label> 
+            <input type="text" class="forminputs"><br>
+            <label for="namesID">Message:</label>
+            <input type="text" class="forminputs"><br>
+            <button>Submit</button>
+        </form>
 
+    </div>
+    <script src="main.js"></script>
 </body>
 
 </html>
